@@ -1,0 +1,371 @@
+/* ============================================================
+   Beranda — hero & panggung 3D
+   ============================================================ */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 156px 0 96px;
+  background:
+    radial-gradient(900px 480px at 88% 6%, rgba(20, 184, 132, 0.16), transparent 60%),
+    radial-gradient(700px 420px at 4% 90%, rgba(255, 122, 69, 0.1), transparent 62%),
+    linear-gradient(180deg, #f5fdf9 0%, #ffffff 78%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.03fr 0.97fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero__content {
+  animation: riseIn 0.7s ease both;
+}
+
+.hero h1 {
+  font-size: clamp(2.15rem, 4.4vw, 3.35rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.hero h1 span {
+  background: linear-gradient(120deg, var(--brand-500), var(--brand-700));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__lead {
+  margin-top: 1.15rem;
+  font-size: 1.06rem;
+  max-width: 33rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.9rem;
+}
+
+.hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.hero__chips li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.hero__chips svg {
+  color: var(--brand-600);
+}
+
+/* ---------------- Panggung 3D ---------------- */
+.hero__scene {
+  position: relative;
+  height: 500px;
+  perspective: 1300px;
+  animation: riseIn 0.9s 0.15s ease both;
+}
+
+.scene__glow {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20, 184, 132, 0.32), transparent 66%);
+  filter: blur(6px);
+}
+
+/* --- kubus 3D berputar --- */
+.cube3d {
+  position: absolute;
+  top: 34px;
+  left: 8%;
+  width: 92px;
+  height: 92px;
+  transform-style: preserve-3d;
+  animation: spinCube 16s linear infinite;
+}
+
+.cube3d__face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.04em;
+  background: linear-gradient(140deg, rgba(46, 230, 168, 0.9), rgba(10, 106, 81, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 24px rgba(255, 255, 255, 0.28);
+  backface-visibility: visible;
+}
+
+.cube3d__face--front {
+  transform: translateZ(46px);
+}
+.cube3d__face--back {
+  transform: rotateY(180deg) translateZ(46px);
+}
+.cube3d__face--right {
+  transform: rotateY(90deg) translateZ(46px);
+}
+.cube3d__face--left {
+  transform: rotateY(-90deg) translateZ(46px);
+}
+.cube3d__face--top {
+  transform: rotateX(90deg) translateZ(46px);
+}
+.cube3d__face--bottom {
+  transform: rotateX(-90deg) translateZ(46px);
+}
+
+/* --- kartu melayang --- */
+.float-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(227, 236, 232, 0.9);
+  border-radius: var(--radius);
+  box-shadow: 0 30px 60px -34px rgba(6, 78, 60, 0.55);
+  z-index: 2;
+}
+
+.float-card--main {
+  top: 138px;
+  left: 50%;
+  width: min(340px, 84%);
+  padding: 20px;
+  animation: floatMain 6s ease-in-out infinite;
+}
+
+.float-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.float-card__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--brand-500);
+  position: relative;
+}
+
+.float-card__dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--brand-500);
+  animation: pulseRing 1.8s ease-out infinite;
+}
+
+.float-card__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  padding: 5px 0;
+}
+
+.float-card__row strong {
+  color: var(--ink);
+}
+
+.float-card__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.float-card__total strong {
+  color: var(--accent-strong);
+  font-size: 1rem;
+}
+
+.float-card__status {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brand-700);
+  background: var(--brand-50);
+  border: 1px solid var(--brand-100);
+  border-radius: 999px;
+  padding: 0.5rem;
+}
+
+.float-card--rating {
+  bottom: 58px;
+  left: -8px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 14px 18px;
+  color: var(--star);
+  animation: floatY 5s 0.6s ease-in-out infinite;
+}
+
+.float-card--rating div {
+  display: flex;
+  flex-direction: column;
+}
+
+.float-card--rating strong {
+  font-size: 1.05rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.float-card--rating span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.float-card--promo {
+  top: 46px;
+  right: -4px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: floatY 5.6s 1.2s ease-in-out infinite;
+}
+
+.float-card__tag {
+  align-self: flex-start;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  margin-bottom: 4px;
+}
+
+.float-card--promo strong {
+  font-size: 1.16rem;
+  color: var(--ink);
+}
+
+.float-card--promo span:last-child {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* ---------------- Responsif hero ---------------- */
+@media (max-width: 980px) {
+  .hero {
+    padding: 138px 0 70px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .hero__scene {
+    height: 440px;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .cube3d {
+    left: 4%;
+  }
+}
+
+@media (max-width: 560px) {
+  /* Panggung 3D disederhanakan: kartu ditumpuk vertikal agar tidak
+     saling menutupi di layar sempit */
+  .hero__scene {
+    height: 470px;
+    max-width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-top: 8px;
+  }
+
+  .scene__glow {
+    width: 300px;
+    height: 300px;
+    top: 30px;
+  }
+
+  .float-card {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: 300px;
+    animation: none;
+    transform: none;
+  }
+
+  .cube3d {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 4px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .cube3d__face {
+    border-radius: 11px;
+    font-size: 1rem;
+  }
+
+  .cube3d__face--front {
+    transform: translateZ(35px);
+  }
+  .cube3d__face--back {
+    transform: rotateY(180deg) translateZ(35px);
+  }
+  .cube3d__face--right {
+    transform: rotateY(90deg) translateZ(35px);
+  }
+  .cube3d__face--left {
+    transform: rotateY(-90deg) translateZ(35px);
+  }
+  .cube3d__face--top {
+    transform: rotateX(90deg) translateZ(35px);
+  }
+  .cube3d__face--bottom {
+    transform: rotateX(-90deg) translateZ(35px);
+  }
+}

@@ -1,0 +1,1164 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mockup apotek3D — Pratinjau Desain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="mockup.css" />
+  </head>
+  <body>
+    <div class="m-shell" id="stage" data-view="desktop">
+      <!-- ============ HEADER MOCKUP ============ -->
+      <header class="m-top">
+        <div class="m-brand">
+          <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="a" x1="24" y1="4" x2="44" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#3ddfae" /><stop offset="1" stop-color="#12b981" />
+              </linearGradient>
+              <linearGradient id="b" x1="4" y1="15" x2="24" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0f9d76" /><stop offset="1" stop-color="#0a7a5b" />
+              </linearGradient>
+              <linearGradient id="c" x1="44" y1="15" x2="24" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0b8463" /><stop offset="1" stop-color="#066048" />
+              </linearGradient>
+            </defs>
+            <path d="M24 4 44 15 24 26 4 15Z" fill="url(#a)" />
+            <path d="M4 15 24 26v18L4 33Z" fill="url(#b)" />
+            <path d="M44 15 24 26v18l20-11Z" fill="url(#c)" />
+            <circle cx="37" cy="37" r="9.5" fill="#fff" />
+            <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+          </svg>
+          <div>
+            <h1>Mockup apotek3D</h1>
+            <p>Pratinjau desain (hi-fi) — sesuai docs/02 wireframe &amp; docs/03 design system</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center">
+          <label
+            style="font-size: 13px; font-weight: 700; color: var(--muted); display: flex; gap: 7px; align-items: center; cursor: pointer"
+          >
+            <input type="checkbox" id="anno" /> Tampilkan anotasi
+          </label>
+          <div class="m-controls">
+            <button type="button" data-set-view="desktop" class="is-active">Desktop</button>
+            <button type="button" data-set-view="tablet">Tablet</button>
+            <button type="button" data-set-view="mobile">HP</button>
+          </div>
+        </div>
+      </header>
+
+      <nav class="m-jump">
+        <a href="#styleguide">Style guide</a>
+        <a href="#beranda">1 · Beranda</a>
+        <a href="#promo">2 · Promo</a>
+        <a href="#profil">3 · Profil</a>
+        <a href="#kontak">4 · Kontak</a>
+        <a href="#notfound">5 · 404</a>
+      </nav>
+
+      <!-- ============ STYLE GUIDE ============ -->
+      <section class="board" id="styleguide">
+        <h3>🎨 Design System — ringkasan token</h3>
+        <div class="board__grid">
+          <div>
+            <strong style="font-size: 13px">Warna utama</strong>
+            <div class="swatches" style="margin-top: 10px">
+              <div class="swatch"><b style="background: #0f9d76"></b><span>600 · #0F9D76</span></div>
+              <div class="swatch"><b style="background: #14b884"></b><span>500 · #14B884</span></div>
+              <div class="swatch"><b style="background: #0b8463"></b><span>700 · #0B8463</span></div>
+              <div class="swatch"><b style="background: #064e3c"></b><span>900 · #064E3C</span></div>
+              <div class="swatch"><b style="background: #eafaf3"></b><span>50 · #EAFaf3</span></div>
+              <div class="swatch"><b style="background: #ff7a45"></b><span>accent · #FF7A45</span></div>
+              <div class="swatch"><b style="background: #f4511e"></b><span>accent-2 · #F4511E</span></div>
+              <div class="swatch"><b style="background: #f7b500"></b><span>star · #F7B500</span></div>
+              <div class="swatch"><b style="background: #10201b"></b><span>ink · #10201B</span></div>
+              <div class="swatch"><b style="background: #f6faf8"></b><span>surface · #F6FAF8</span></div>
+            </div>
+          </div>
+
+          <div>
+            <strong style="font-size: 13px">Skala tipografi</strong>
+            <div style="margin-top: 10px">
+              <div class="type-row"><code>H1 clamp 3.35rem</code><b style="font-size: 20px">Obat asli, harga jujur</b></div>
+              <div class="type-row"><code>H2 clamp 2.4rem</code><b style="font-size: 17px">Penawaran spesial bulan ini</b></div>
+              <div class="type-row"><code>H3 1.05rem/700</code><span style="font-weight: 700">Konsultasi Apoteker</span></div>
+              <div class="type-row"><code>lead 1.06rem</code><span>Paragraf pembuka di hero</span></div>
+              <div class="type-row"><code>body 0.9rem</code><span>Deskripsi kartu produk</span></div>
+              <div class="type-row"><code>eyebrow 0.76rem</code><span class="eyebrow" style="margin: 0">APOTEK KELUARGA</span></div>
+            </div>
+          </div>
+
+          <div>
+            <strong style="font-size: 13px">Tombol</strong>
+            <div class="demo-row" style="margin-top: 10px">
+              <span class="btn btn--brand">Tombol Utama</span>
+              <span class="btn btn--soft">Tombol Sekunder</span>
+              <span class="btn btn--soft btn--block">Blok Penuh</span>
+            </div>
+            <strong style="font-size: 13px; display: block; margin-top: 18px">Chip</strong>
+            <div class="demo-row" style="margin-top: 10px">
+              <span class="chip chip--category">Obat Umum</span>
+              <span class="chip chip--filter">Semua</span>
+              <span class="chip chip--filter is-active">Vitamin &amp; Suplemen</span>
+            </div>
+            <strong style="font-size: 13px; display: block; margin-top: 18px">Radius &amp; bayangan</strong>
+            <div class="demo-row" style="margin-top: 10px">
+              <span
+                style="width: 74px; height: 52px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow-sm)"
+              ></span>
+              <span
+                style="width: 74px; height: 52px; background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow-md)"
+              ></span>
+              <span
+                style="width: 74px; height: 52px; background: #fff; border-radius: 26px; box-shadow: var(--shadow-lg); transform: rotate(-3deg)"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HALAMAN 1 — BERANDA
+           ============================================================ -->
+      <section class="m-page" id="beranda">
+        <div class="m-page__head">
+          <span class="m-page__num">1</span>
+          <div>
+            <h2>Beranda — <code style="font-size: 13px; color: var(--muted)">/</code></h2>
+            <p>Hero 3D · strip statistik · promo unggulan · layanan · testimoni · CTA</p>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots"><i></i><i></i><i></i></span>
+            <span class="frame__url">https://apotek3d.id/</span>
+          </div>
+
+          <!-- NAVBAR -->
+          <header class="navbar is-scrolled">
+            <div class="container navbar__inner">
+              <a class="brand" href="#beranda">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path d="M24 4 44 15 24 26 4 15Z" fill="#2ee6a8" />
+                  <path d="M4 15 24 26v18L4 33Z" fill="#0f9d76" />
+                  <path d="M44 15 24 26v18l20-11Z" fill="#0b8463" />
+                  <circle cx="37" cy="37" r="9.5" fill="#fff" />
+                  <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+                <span class="brand__text">apotek<span>3D</span></span>
+              </a>
+              <nav class="navbar__menu">
+                <span class="nav-link is-active">Beranda</span>
+                <span class="nav-link">Promo</span>
+                <span class="nav-link">Profil</span>
+                <span class="nav-link">Kontak</span>
+                <span class="btn btn--brand navbar__wa">Chat Kami</span>
+              </nav>
+              <span class="navbar__toggle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                  <path d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              </span>
+            </div>
+          </header>
+
+          <!-- HERO -->
+          <section class="hero" data-anno="1 · Hero">
+            <div class="container hero__inner">
+              <div class="hero__content">
+                <span class="eyebrow">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M20.4 6.6a5 5 0 0 0-7.1 0L12 7.9l-1.3-1.3a5 5 0 1 0-7.1 7.1L12 21.5l8.4-7.8a5 5 0 0 0 0-7.1z" />
+                  </svg>
+                  Apotek keluarga sejak 2011
+                </span>
+                <h1>Obat asli, harga jujur, <span>diantar cepat</span> ke rumah Anda.</h1>
+                <p class="hero__lead">
+                  apotek3D melayani kebutuhan kesehatan warga Depok dengan apoteker
+                  bersertifikat, konsultasi gratis, dan promo rutin setiap bulan.
+                </p>
+                <div class="hero__actions">
+                  <span class="btn btn--brand btn--lg">
+                    Lihat Promo Bulan Ini
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4.5 12h14M13 6.5l5.5 5.5L13 17.5" />
+                    </svg>
+                  </span>
+                  <span class="btn btn--soft btn--lg">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.5 11.6a8.4 8.4 0 0 1-12.2 7.5L3.5 20.5l1.4-4.7A8.4 8.4 0 1 1 20.5 11.6z" />
+                      <path d="M8.9 8.4c.2-.4.7-.5 1-.3l.8.5c.3.2.4.6.3.9l-.2.6c-.1.3 0 .6.2.8.6.9 1.4 1.6 2.3 2.1.3.2.6.2.8 0l.5-.4c.3-.2.6-.2.9 0l1 .8c.3.3.3.7.1 1-.4.6-1.1 1-1.8.9-2.7-.3-5.5-3-6-5.8-.1-.7.2-1.4.8-1.8l.5-.3z" fill="currentColor" stroke="none" />
+                    </svg>
+                    Tanya Apoteker
+                  </span>
+                </div>
+                <ul class="hero__chips">
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                      <path d="M12 3l7.5 3v5.2c0 4.6-3.2 8.7-7.5 10.3C7.7 19.9 4.5 15.8 4.5 11.2V6L12 3z" />
+                      <path d="M9 12.2l2.1 2.1 4-4.2" />
+                    </svg>
+                    100% produk resmi
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2.5 6.5h10.5v10H2.5zM13 9.5h3.8l2.7 3v4H13z" />
+                      <circle cx="7" cy="18.5" r="1.9" /><circle cx="17" cy="18.5" r="1.9" />
+                    </svg>
+                    Antar 30 menit
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" />
+                    </svg>
+                    Rating 4.9/5
+                  </li>
+                </ul>
+              </div>
+
+              <div class="hero__scene" aria-hidden="true">
+                <div class="scene__glow"></div>
+                <div class="cube3d">
+                  <div class="cube3d__face cube3d__face--front">3D</div>
+                  <div class="cube3d__face cube3d__face--back">3D</div>
+                  <div class="cube3d__face cube3d__face--right"></div>
+                  <div class="cube3d__face cube3d__face--left"></div>
+                  <div class="cube3d__face cube3d__face--top"></div>
+                  <div class="cube3d__face cube3d__face--bottom"></div>
+                </div>
+                <div class="float-card float-card--main">
+                  <div class="float-card__head"><span class="float-card__dot"></span> Pesanan #A-118</div>
+                  <div class="float-card__row"><span>Paracetamol 500 mg</span><strong>Rp12.000</strong></div>
+                  <div class="float-card__row"><span>Vitamin C 1000 mg</span><strong>Rp45.000</strong></div>
+                  <div class="float-card__total"><span>Total hemat</span><strong>-Rp46.000</strong></div>
+                  <div class="float-card__status">Dalam perjalanan • tiba 18.40</div>
+                </div>
+                <div class="float-card float-card--rating">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <div><strong>4.9 / 5</strong><span>1.240 ulasan pelanggan</span></div>
+                </div>
+                <div class="float-card float-card--promo">
+                  <span class="float-card__tag">PROMO OKTOBER</span>
+                  <strong>Diskon s.d. 40%</strong>
+                  <span>Berlaku 1 – 31 Oktober 2026</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STATISTIK -->
+          <div class="stats" data-anno="2 · Statistik">
+            <div class="stats__grid">
+              <div class="stat"><strong>15<em>thn</em></strong><span>Melayani warga Depok</span></div>
+              <div class="stat"><strong>12.000+</strong><span>Pelanggan setia</span></div>
+              <div class="stat"><strong>2.500+</strong><span>Produk tersedia</span></div>
+              <div class="stat"><strong>4.9<em>/5</em></strong><span>Rating pelanggan</span></div>
+            </div>
+          </div>
+
+          <!-- PROMO UNGGULAN -->
+          <section class="section container" data-anno="3 · Promo unggulan">
+            <div class="section-title section-title--center">
+              <span class="eyebrow">Promo Berjalan</span>
+              <h2>Penawaran spesial bulan ini</h2>
+              <p>Pilihan obat dan suplemen paling dicari, khusus dengan harga promo 1 – 31 Oktober 2026.</p>
+            </div>
+            <div class="product-grid">
+              <!-- kartu 1 -->
+              <article class="product-card">
+                <div class="product-card__media media--pill">
+                  <span class="product-card__badge">-33%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="2.6" y="8.6" width="18.8" height="6.8" rx="3.4" transform="rotate(-45 12 12)" />
+                    <path d="M9.2 9.2l5.6 5.6" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Obat Umum</span>
+                  <h3>Paracetamol 500 mg — 10 Tablet</h3>
+                  <p class="product-card__desc">Penurun demam dan pereda nyeri ringan. Cocok untuk sakit kepala maupun nyeri otot.</p>
+                  <div class="product-card__price">
+                    <strong>Rp12.000</strong><s>Rp18.000</s>
+                    <span class="product-card__save">Hemat Rp6.000</span>
+                  </div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <!-- kartu 2 -->
+              <article class="product-card">
+                <div class="product-card__media media--jar">
+                  <span class="product-card__badge">-40%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="5" y="8.5" width="14" height="12.5" rx="3" />
+                    <path d="M6.6 5.5h10.8v3H6.6zM9.5 14.5h5" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Vitamin &amp; Suplemen</span>
+                  <h3>Vitamin C 1000 mg — 30 Tablet</h3>
+                  <p class="product-card__desc">Daya tahan tubuh tetap terjaga. Cukup satu tablet per hari setelah makan.</p>
+                  <div class="product-card__price">
+                    <strong>Rp45.000</strong><s>Rp75.000</s>
+                    <span class="product-card__save">Hemat Rp30.000</span>
+                  </div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <!-- kartu 3 -->
+              <article class="product-card">
+                <div class="product-card__media media--bottle">
+                  <span class="product-card__badge">-30%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M9.5 2.5h5v2.6l1.7 2.3a3.6 3.6 0 0 1 .6 1.9v10.2a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2V9.3c0-.7.2-1.4.6-1.9l1.7-2.3V2.5z" />
+                    <path d="M7.4 13.2h9.2" />
+                  </svg>
+                  <span class="product-card__until">s.d. 25 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Ibu &amp; Anak</span>
+                  <h3>Sirup Anak Batuk &amp; Pilek 60 ml</h3>
+                  <p class="product-card__desc">Formula lembut untuk anak usia 2–12 tahun, rasa jeruk yang tidak pahit.</p>
+                  <div class="product-card__price">
+                    <strong>Rp32.000</strong><s>Rp46.000</s>
+                    <span class="product-card__save">Hemat Rp14.000</span>
+                  </div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <!-- kartu 4 -->
+              <article class="product-card">
+                <div class="product-card__media media--box">
+                  <span class="product-card__badge">-38%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="3" y="7" width="18" height="13.5" rx="2.5" />
+                    <path d="M9 7V5.2A2.2 2.2 0 0 1 11.2 3h1.6A2.2 2.2 0 0 1 15 5.2V7M12 10.6v6M9 13.6h6" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Alat Kesehatan</span>
+                  <h3>Masker Medis 3 Ply — 50 pcs</h3>
+                  <p class="product-card__desc">Filtrasi efektif 95%, nyaman dipakai seharian, karet elastis tidak menekan telinga.</p>
+                  <div class="product-card__price">
+                    <strong>Rp28.000</strong><s>Rp45.000</s>
+                    <span class="product-card__save">Hemat Rp17.000</span>
+                  </div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+            </div>
+            <div class="section__more">
+              <span class="btn btn--soft">
+                Lihat semua promo (8)
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4.5 12h14M13 6.5l5.5 5.5L13 17.5" />
+                </svg>
+              </span>
+            </div>
+          </section>
+
+          <!-- LAYANAN -->
+          <section class="section section--tint" data-anno="4 · Layanan">
+            <div class="container">
+              <div class="section-title section-title--center">
+                <span class="eyebrow">Layanan Kami</span>
+                <h2>Bukan sekadar tempat beli obat</h2>
+                <p>Empat hal yang membuat pelanggan tetap kembali ke apotek3D.</p>
+              </div>
+              <div class="service-grid">
+                <article class="service-card">
+                  <span class="service-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.5 11.6a8.4 8.4 0 0 1-12.2 7.5L3.5 20.5l1.4-4.7A8.4 8.4 0 1 1 20.5 11.6z" />
+                    </svg>
+                  </span>
+                  <h3>Konsultasi Apoteker</h3>
+                  <p>Bingung pilih obat? Apoteker kami siap menjawab setiap hari, gratis dan tanpa perlu beli dulu.</p>
+                </article>
+                <article class="service-card">
+                  <span class="service-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2.5 6.5h10.5v10H2.5zM13 9.5h3.8l2.7 3v4H13z" />
+                      <circle cx="7" cy="18.5" r="1.9" /><circle cx="17" cy="18.5" r="1.9" />
+                    </svg>
+                  </span>
+                  <h3>Antar Cepat 30 Menit</h3>
+                  <p>Pesanan obat diantar ke rumah area Cimanggis sekitarnya. Gratis untuk belanja di atas Rp100.000.</p>
+                </article>
+                <article class="service-card">
+                  <span class="service-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                      <path d="M12 3l7.5 3v5.2c0 4.6-3.2 8.7-7.5 10.3C7.7 19.9 4.5 15.8 4.5 11.2V6L12 3z" />
+                      <path d="M9 12.2l2.1 2.1 4-4.2" />
+                    </svg>
+                  </span>
+                  <h3>100% Produk Asli</h3>
+                  <p>Seluruh produk bergaransi keaslian, disimpan suhu terkontrol, dan berizin resmi dari Dinas Kesehatan.</p>
+                </article>
+                <article class="service-card">
+                  <span class="service-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+                      <path d="M3.5 9.6h17M8.5 3.5v3M15.5 3.5v3" />
+                    </svg>
+                  </span>
+                  <h3>Program Promo Rutin</h3>
+                  <p>Diskon obat, vitamin, dan alat kesehatan setiap bulan — cek halaman Promo untuk penawaran terbaru.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- TESTIMONI -->
+          <section class="section container" data-anno="5 · Testimoni">
+            <div class="section-title section-title--center">
+              <span class="eyebrow">Kata Pelanggan</span>
+              <h2>Dipercaya ribuan keluarga</h2>
+              <p>Ulasan asli dari pelanggan yang rutin belanja di apotek3D.</p>
+            </div>
+            <div class="testimonial-grid">
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                </div>
+                <blockquote>“Pesannya lewat WhatsApp, 20 menit sampai. Apotekernya sabar banget jelasin dosis obat buat anak saya.”</blockquote>
+                <figcaption>
+                  <span class="testimonial__avatar">R</span>
+                  <span><strong>Rina Kurnia</strong><em>Ibu rumah tangga, Cimanggis</em></span>
+                </figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                </div>
+                <blockquote>“Saya langganan vitamin di sini. Harga lebih bersaing dan sering dapat promo, admin juga cepat balas.”</blockquote>
+                <figcaption>
+                  <span class="testimonial__avatar">B</span>
+                  <span><strong>Bagas Pratama</strong><em>Pekerja kantoran, Depok</em></span>
+                </figcaption>
+              </figure>
+              <figure class="testimonial">
+                <div class="testimonial__stars">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg>
+                </div>
+                <blockquote>“Bersih, rapi, dan lengkap. Kalau stok obat habis biasanya langsung dicarikan alternatifnya.”</blockquote>
+                <figcaption>
+                  <span class="testimonial__avatar">S</span>
+                  <span><strong>Siti Aminah</strong><em>Guru SD, Kukusan</em></span>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- CTA BAND -->
+          <section class="section container" data-anno="6 · CTA">
+            <div class="cta-band">
+              <div class="cta-band__text">
+                <h2>Butuh obat mendesak malam ini?</h2>
+                <p>Kirim daftar belanjaan lewat WhatsApp — kami siapkan dan antar secepat mungkin, termasuk di luar jam operasional toko.</p>
+              </div>
+              <div class="cta-band__actions">
+                <span class="btn btn--white">Pesan via WhatsApp</span>
+                <span class="btn btn--outline-white">Lihat Lokasi</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- FOOTER -->
+          <footer class="footer">
+            <div class="container footer__grid">
+              <div class="footer__brand">
+                <span class="brand">
+                  <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                    <path d="M24 4 44 15 24 26 4 15Z" fill="#2ee6a8" />
+                    <path d="M4 15 24 26v18L4 33Z" fill="#0f9d76" />
+                    <path d="M44 15 24 26v18l20-11Z" fill="#0b8463" />
+                    <circle cx="37" cy="37" r="9.5" fill="#fff" />
+                    <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+                  </svg>
+                  <span class="brand__text">apotek<span>3D</span></span>
+                </span>
+                <p>Apotek keluarga yang melayani warga Depok sejak 2011. Konsultasi gratis dengan apoteker bersertifikat dan antar obat cepat ke rumah Anda.</p>
+                <span class="btn btn--ghost-light">Konsultasi Sekarang</span>
+              </div>
+              <div class="footer__col">
+                <h4>Navigasi</h4>
+                <ul>
+                  <li><a href="#beranda">Beranda</a></li>
+                  <li><a href="#promo">Promo</a></li>
+                  <li><a href="#profil">Profil Apotek</a></li>
+                  <li><a href="#kontak">Kontak &amp; Lokasi</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Hubungi Kami</h4>
+                <ul>
+                  <li>Jl. Melati No. 24, Kec. Cimanggis, Kota Depok, Jawa Barat 16454</li>
+                  <li>+62 812-3456-7890</li>
+                  <li>halo@apotek3d.id</li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Jam Buka</h4>
+                <ul>
+                  <li>Senin – Jumat <strong>08.00 – 22.00</strong></li>
+                  <li>Sabtu <strong>08.00 – 23.00</strong></li>
+                  <li>Minggu <strong>09.00 – 21.00</strong></li>
+                  <li>Antar obat darurat <strong>24 jam via WhatsApp</strong></li>
+                </ul>
+              </div>
+            </div>
+            <div class="container footer__bottom">
+              <span>© 2026 apotek3D. Seluruh hak cipta dilindungi.</span>
+              <span>Izin SIP No. 503/1234/DPMPTSP/2024</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HALAMAN 2 — PROMO
+           ============================================================ -->
+      <section class="m-page" id="promo">
+        <div class="m-page__head">
+          <span class="m-page__num">2</span>
+          <div>
+            <h2>Promo — <code style="font-size: 13px; color: var(--muted)">/promo</code></h2>
+            <p>Halaman katalog khusus produk yang sedang diskon</p>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots"><i></i><i></i><i></i></span>
+            <span class="frame__url">https://apotek3d.id/promo</span>
+          </div>
+
+          <header class="navbar is-scrolled">
+            <div class="container navbar__inner">
+              <span class="brand">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path d="M24 4 44 15 24 26 4 15Z" fill="#2ee6a8" /><path d="M4 15 24 26v18L4 33Z" fill="#0f9d76" />
+                  <path d="M44 15 24 26v18l20-11Z" fill="#0b8463" /><circle cx="37" cy="37" r="9.5" fill="#fff" />
+                  <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+                <span class="brand__text">apotek<span>3D</span></span>
+              </span>
+              <nav class="navbar__menu">
+                <span class="nav-link">Beranda</span>
+                <span class="nav-link is-active">Promo</span>
+                <span class="nav-link">Profil</span>
+                <span class="nav-link">Kontak</span>
+                <span class="btn btn--brand navbar__wa">Chat Kami</span>
+              </nav>
+              <span class="navbar__toggle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+              </span>
+            </div>
+          </header>
+
+          <section class="page-hero" data-anno="1 · Page hero">
+            <div class="container page-hero__inner">
+              <span class="eyebrow eyebrow--light">Katalog Promo</span>
+              <h1>Promo khusus bulan ini</h1>
+              <p>Semua produk di halaman ini sedang dalam masa diskon — berlaku 1 – 31 Oktober 2026 atau selama stok masih tersedia.</p>
+            </div>
+            <div class="page-hero__orb page-hero__orb--one"></div>
+            <div class="page-hero__orb page-hero__orb--two"></div>
+          </section>
+
+          <section class="section container">
+            <div class="promo-note" data-anno="2 · Cara pesan">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                <path d="M20.4 13.2l-7.2 7.2a1.9 1.9 0 0 1-2.7 0L3 12.9V3.5h9.4l8 8a1.9 1.9 0 0 1 0 1.7z" />
+                <circle cx="7.6" cy="7.6" r="1.4" />
+              </svg>
+              <p><strong>Cara pesan:</strong> klik “Pesan Promo Ini” pada produk, Anda akan diarahkan ke WhatsApp kami dengan detail pesanan yang sudah terisi. Apoteker akan mengonfirmasi ketersediaan dan menghitung ongkir.</p>
+            </div>
+
+            <div class="promo-toolbar" data-anno="3 · Cari &amp; filter">
+              <div class="search-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                  <circle cx="11" cy="11" r="7" /><path d="M16.2 16.2L20.5 20.5" />
+                </svg>
+                <span>Cari obat, vitamin, alat kesehatan…</span>
+              </div>
+              <div class="chips">
+                <span class="chip chip--filter is-active">Semua</span>
+                <span class="chip chip--filter">Obat Umum</span>
+                <span class="chip chip--filter">Vitamin &amp; Suplemen</span>
+                <span class="chip chip--filter">Ibu &amp; Anak</span>
+                <span class="chip chip--filter">Alat Kesehatan</span>
+                <span class="chip chip--filter">Perawatan Tubuh</span>
+              </div>
+            </div>
+
+            <p class="promo-count">Menampilkan 8 dari 8 produk promo</p>
+
+            <div class="product-grid" data-anno="4 · Grid produk promo">
+              <article class="product-card">
+                <div class="product-card__media media--pill">
+                  <span class="product-card__badge">-33%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="2.6" y="8.6" width="18.8" height="6.8" rx="3.4" transform="rotate(-45 12 12)" /><path d="M9.2 9.2l5.6 5.6" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Obat Umum</span>
+                  <h3>Paracetamol 500 mg — 10 Tablet</h3>
+                  <p class="product-card__desc">Penurun demam dan pereda nyeri ringan. Cocok untuk sakit kepala maupun nyeri otot.</p>
+                  <div class="product-card__price"><strong>Rp12.000</strong><s>Rp18.000</s><span class="product-card__save">Hemat Rp6.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--jar">
+                  <span class="product-card__badge">-40%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="5" y="8.5" width="14" height="12.5" rx="3" /><path d="M6.6 5.5h10.8v3H6.6zM9.5 14.5h5" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Vitamin &amp; Suplemen</span>
+                  <h3>Vitamin C 1000 mg — 30 Tablet</h3>
+                  <p class="product-card__desc">Daya tahan tubuh tetap terjaga. Cukup satu tablet per hari setelah makan.</p>
+                  <div class="product-card__price"><strong>Rp45.000</strong><s>Rp75.000</s><span class="product-card__save">Hemat Rp30.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--bottle">
+                  <span class="product-card__badge">-30%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M9.5 2.5h5v2.6l1.7 2.3a3.6 3.6 0 0 1 .6 1.9v10.2a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2V9.3c0-.7.2-1.4.6-1.9l1.7-2.3V2.5z" />
+                    <path d="M7.4 13.2h9.2" />
+                  </svg>
+                  <span class="product-card__until">s.d. 25 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Ibu &amp; Anak</span>
+                  <h3>Sirup Anak Batuk &amp; Pilek 60 ml</h3>
+                  <p class="product-card__desc">Formula lembut untuk anak usia 2–12 tahun, rasa jeruk yang tidak pahit.</p>
+                  <div class="product-card__price"><strong>Rp32.000</strong><s>Rp46.000</s><span class="product-card__save">Hemat Rp14.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--box">
+                  <span class="product-card__badge">-38%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="3" y="7" width="18" height="13.5" rx="2.5" /><path d="M9 7V5.2A2.2 2.2 0 0 1 11.2 3h1.6A2.2 2.2 0 0 1 15 5.2V7M12 10.6v6M9 13.6h6" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Alat Kesehatan</span>
+                  <h3>Masker Medis 3 Ply — 50 pcs</h3>
+                  <p class="product-card__desc">Filtrasi efektif 95%, nyaman dipakai seharian, karet elastis tidak menekan telinga.</p>
+                  <div class="product-card__price"><strong>Rp28.000</strong><s>Rp45.000</s><span class="product-card__save">Hemat Rp17.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--drop">
+                  <span class="product-card__badge">-30%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M12 3s6 6.4 6 10.8a6 6 0 1 1-12 0C6 9.4 12 3 12 3z" /><path d="M9.4 14.6a2.6 2.6 0 0 0 2.6 2.6" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Perawatan Tubuh</span>
+                  <h3>Minyak Kayu Putih 100 ml</h3>
+                  <p class="product-card__desc">Penghangat tubuh andalan keluarga. Aromanya tahan lama dan tidak lengket.</p>
+                  <div class="product-card__price"><strong>Rp21.000</strong><s>Rp30.000</s><span class="product-card__save">Hemat Rp9.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--tube">
+                  <span class="product-card__badge">-34%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M8.5 8.5h7v11a1.8 1.8 0 0 1-1.8 1.8h-3.4A1.8 1.8 0 0 1 8.5 19.5v-11z" />
+                    <path d="M9.5 8.5v-3a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5v3M8.5 13h7" />
+                  </svg>
+                  <span class="product-card__until">s.d. 20 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Perawatan Tubuh</span>
+                  <h3>Sunscreen SPF 50+ — 50 ml</h3>
+                  <p class="product-card__desc">Perlindungan UVA/UVB harian, tekstur ringan, cocok untuk aktivitas di luar ruangan.</p>
+                  <div class="product-card__price"><strong>Rp69.000</strong><s>Rp105.000</s><span class="product-card__save">Hemat Rp36.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--gauge">
+                  <span class="product-card__badge">-27%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M3.5 17a9 9 0 1 1 17 0" /><path d="M12 12.5l4-3.2" /><circle cx="12" cy="14" r="1.6" />
+                  </svg>
+                  <span class="product-card__until">s.d. 31 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Alat Kesehatan</span>
+                  <h3>Tensimeter Digital — 1 Unit</h3>
+                  <p class="product-card__desc">Ukur tekanan darah sendiri di rumah dengan layar besar dan indikator detak jantung.</p>
+                  <div class="product-card__price"><strong>Rp385.000</strong><s>Rp525.000</s><span class="product-card__save">Hemat Rp140.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+              <article class="product-card">
+                <div class="product-card__media media--can">
+                  <span class="product-card__badge">-27%</span>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <rect x="6.5" y="3.5" width="11" height="17" rx="2.4" /><path d="M6.5 7.5h11M6.5 16.5h11" />
+                  </svg>
+                  <span class="product-card__until">s.d. 28 Okt 2026</span>
+                </div>
+                <div class="product-card__body">
+                  <span class="chip chip--category">Vitamin &amp; Suplemen</span>
+                  <h3>Susu Nutrisi Lansia — 400 g</h3>
+                  <p class="product-card__desc">Tinggi protein dan kalsium untuk menjaga massa otot serta kepadatan tulang.</p>
+                  <div class="product-card__price"><strong>Rp96.000</strong><s>Rp132.000</s><span class="product-card__save">Hemat Rp36.000</span></div>
+                  <span class="btn btn--brand btn--block">Pesan Promo Ini</span>
+                </div>
+              </article>
+            </div>
+
+            <p class="promo-disclaimer">
+              Harga promo berlaku selama periode berjalan atau hingga stok habis. Gambar produk
+              bersifat ilustrasi. Obat keras tetap memerlukan resep dokter sesuai ketentuan.
+            </p>
+          </section>
+
+          <footer class="footer">
+            <div class="container footer__bottom">
+              <span>© 2026 apotek3D · Bukan pengganti konsultasi dokter.</span>
+              <span>Izin SIP No. 503/1234/DPMPTSP/2024</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HALAMAN 3 — PROFIL
+           ============================================================ -->
+      <section class="m-page" id="profil">
+        <div class="m-page__head">
+          <span class="m-page__num">3</span>
+          <div>
+            <h2>Profil — <code style="font-size: 13px; color: var(--muted)">/profil</code></h2>
+            <p>Cerita apotek, fakta, visi-misi, dan nilai</p>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots"><i></i><i></i><i></i></span>
+            <span class="frame__url">https://apotek3d.id/profil</span>
+          </div>
+
+          <header class="navbar is-scrolled">
+            <div class="container navbar__inner">
+              <span class="brand">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path d="M24 4 44 15 24 26 4 15Z" fill="#2ee6a8" /><path d="M4 15 24 26v18L4 33Z" fill="#0f9d76" />
+                  <path d="M44 15 24 26v18l20-11Z" fill="#0b8463" /><circle cx="37" cy="37" r="9.5" fill="#fff" />
+                  <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+                <span class="brand__text">apotek<span>3D</span></span>
+              </span>
+              <nav class="navbar__menu">
+                <span class="nav-link">Beranda</span>
+                <span class="nav-link">Promo</span>
+                <span class="nav-link is-active">Profil</span>
+                <span class="nav-link">Kontak</span>
+                <span class="btn btn--brand navbar__wa">Chat Kami</span>
+              </nav>
+              <span class="navbar__toggle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+              </span>
+            </div>
+          </header>
+
+          <section class="page-hero" data-anno="1 · Page hero">
+            <div class="container page-hero__inner">
+              <span class="eyebrow eyebrow--light">Profil Apotek</span>
+              <h1>Melayani keluarga Depok sejak 2011</h1>
+              <p>Berawal dari satu etalase kecil di Jl. Melati, kini apotek3D menjadi langganan kesehatan ribuan keluarga — dengan prinsip yang tidak pernah berubah.</p>
+            </div>
+            <div class="page-hero__orb page-hero__orb--one"></div>
+            <div class="page-hero__orb page-hero__orb--two"></div>
+          </section>
+
+          <section class="section container">
+            <div class="story" data-anno="2 · Cerita + kutipan">
+              <div class="story__text">
+                <span class="eyebrow">Cerita Kami</span>
+                <h2>Dari etalase kecil jadi rumah kedua warga sekitar</h2>
+                <p>apotek3D didirikan pada 2011 oleh seorang apoteker muda yang ingin warga sekitar mendapat obat asli dengan harga wajar, tanpa harus menempuh perjalanan jauh ke rumah sakit. Perdana dibuka dengan 120 item obat dan satu orang apoteker penjaga.</p>
+                <p>Hari ini kami menampung lebih dari 2.500 produk, didukung empat apoteker bersertifikat, dan tetap mempertahankan kebiasaan lama: edukasi sebelum menjual. Kami percaya obat yang tepat dimulai dari penjelasan yang tepat.</p>
+                <ul class="check-list">
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6" /><path d="M8.4 12.2l2.5 2.5 4.7-5" /></svg>
+                    Konsultasi gratis tanpa minimum pembelian
+                  </li>
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6" /><path d="M8.4 12.2l2.5 2.5 4.7-5" /></svg>
+                    Menyimpan obat pada suhu terkontrol sesuai standar
+                  </li>
+                  <li>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6" /><path d="M8.4 12.2l2.5 2.5 4.7-5" /></svg>
+                    Menerima resep dokter dan menyiapkannya di tempat
+                  </li>
+                </ul>
+              </div>
+              <aside class="story__panel">
+                <span class="story__quote">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+                    <path d="M20.4 6.6a5 5 0 0 0-7.1 0L12 7.9l-1.3-1.3a5 5 0 1 0-7.1 7.1L12 21.5l8.4-7.8a5 5 0 0 0 0-7.1z" />
+                  </svg>
+                </span>
+                <blockquote>“Obat harus sampai ke orang yang membutuhkannya — dengan harga yang tidak menyakiti, dan penjelasan yang membuat pasien paham.”</blockquote>
+                <div class="story__sign">
+                  <span class="story__avatar">A</span>
+                  <span><strong>apt. Andini Rahmawati, S.Farm.</strong><em>Pendiri &amp; Apoteker Penanggung Jawab</em></span>
+                </div>
+              </aside>
+            </div>
+
+            <div class="facts-grid" data-anno="3 · Fakta">
+              <div class="fact">
+                <span class="fact__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l7.5 3v5.2c0 4.6-3.2 8.7-7.5 10.3C7.7 19.9 4.5 15.8 4.5 11.2V6L12 3z" /><path d="M9 12.2l2.1 2.1 4-4.2" /></svg></span>
+                <strong>Izin SIP resmi</strong><span>No. 503/1234/DPMPTSP/2024</span>
+              </div>
+              <div class="fact">
+                <span class="fact__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4" /><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0" /><path d="M16 5.2a3.4 3.4 0 0 1 0 6.6M17 14.6a5.5 5.5 0 0 1 3.5 4.9" /></svg></span>
+                <strong>4 Apoteker</strong><span>Bersertifikat</span>
+              </div>
+              <div class="fact">
+                <span class="fact__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg></span>
+                <strong>2.500+</strong><span>Produk tersedia</span>
+              </div>
+              <div class="fact">
+                <span class="fact__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M19.5 10.3c0 5.6-7.5 11.2-7.5 11.2S4.5 15.9 4.5 10.3a7.5 7.5 0 1 1 15 0z" /><circle cx="12" cy="10.2" r="2.7" /></svg></span>
+                <strong>2 Cabang</strong><span>Cimanggis &amp; Kukusan</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section--tint" data-anno="4 · Visi &amp; misi">
+            <div class="container vision">
+              <article class="vision__card">
+                <span class="eyebrow">Visi</span>
+                <h3>Menjadi apotek lingkungan paling dipercaya di Depok</h3>
+                <p>Tempat di mana setiap keluarga merasa aman bertanya soal kesehatan, yakin mendapat obat asli, dan tidak pernah merasa dibebani biaya tersembunyi.</p>
+              </article>
+              <article class="vision__card vision__card--misi">
+                <span class="eyebrow">Misi</span>
+                <ul>
+                  <li>Menjamin keaslian seluruh produk yang dijual.</li>
+                  <li>Memberi edukasi obat yang jujur dan mudah dipahami.</li>
+                  <li>Menjaga harga tetap transparan dan bersaing.</li>
+                  <li>Mengantar obat secepat mungkin saat pelanggan membutuhkan.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section container" data-anno="5 · Nilai kami">
+            <div class="section-title section-title--center">
+              <span class="eyebrow">Nilai Kami</span>
+              <h2>Empat prinsip yang tidak kami tawar</h2>
+            </div>
+            <div class="value-grid">
+              <div class="value-card">
+                <span class="value-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l7.5 3v5.2c0 4.6-3.2 8.7-7.5 10.3C7.7 19.9 4.5 15.8 4.5 11.2V6L12 3z" /><path d="M9 12.2l2.1 2.1 4-4.2" /></svg></span>
+                <span class="value-card__num">01</span>
+                <h3>Amanah</h3>
+                <p>Hanya menjual obat asli berizin. Resep dan data kesehatan Anda kami jaga kerahasiaannya.</p>
+              </div>
+              <div class="value-card">
+                <span class="value-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.2 7.5L3.5 20.5l1.4-4.7A8.4 8.4 0 1 1 20.5 11.6z" /></svg></span>
+                <span class="value-card__num">02</span>
+                <h3>Ramah</h3>
+                <p>Setiap pelanggan dilayani tanpa terkecuali, dengan penjelasan yang mudah dipahami.</p>
+              </div>
+              <div class="value-card">
+                <span class="value-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5h10.5v10H2.5zM13 9.5h3.8l2.7 3v4H13z" /><circle cx="7" cy="18.5" r="1.9" /><circle cx="17" cy="18.5" r="1.9" /></svg></span>
+                <span class="value-card__num">03</span>
+                <h3>Cepat</h3>
+                <p>Pesanan diproses dan diantar secepat mungkin — apalagi untuk kebutuhan mendesak.</p>
+              </div>
+              <div class="value-card">
+                <span class="value-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.6l2.6 5.2 5.8.8-4.2 4 1 5.8L12 16.7l-5.2 2.7 1-5.8-4.2-4 5.8-.8L12 3.6z" /></svg></span>
+                <span class="value-card__num">04</span>
+                <h3>Konsisten</h3>
+                <p>Harga transparan dan kualitas pelayanan yang sama sejak 2011.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section container">
+            <div class="cta-band">
+              <div class="cta-band__text">
+                <h2>Butuh obat mendesak malam ini?</h2>
+                <p>Kirim daftar belanjaan lewat WhatsApp — kami siapkan dan antar secepat mungkin.</p>
+              </div>
+              <div class="cta-band__actions">
+                <span class="btn btn--white">Pesan via WhatsApp</span>
+                <span class="btn btn--outline-white">Lihat Lokasi</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HALAMAN 4 — KONTAK
+           ============================================================ -->
+      <section class="m-page" id="kontak">
+        <div class="m-page__head">
+          <span class="m-page__num">4</span>
+          <div>
+            <h2>Kontak — <code style="font-size: 13px; color: var(--muted)">/kontak</code></h2>
+            <p>Info apotek, form pesan ke WhatsApp, peta, dan FAQ</p>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots"><i></i><i></i><i></i></span>
+            <span class="frame__url">https://apotek3d.id/kontak</span>
+          </div>
+
+          <header class="navbar is-scrolled">
+            <div class="container navbar__inner">
+              <span class="brand">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path d="M24 4 44 15 24 26 4 15Z" fill="#2ee6a8" /><path d="M4 15 24 26v18L4 33Z" fill="#0f9d76" />
+                  <path d="M44 15 24 26v18l20-11Z" fill="#0b8463" /><circle cx="37" cy="37" r="9.5" fill="#fff" />
+                  <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+                <span class="brand__text">apotek<span>3D</span></span>
+              </span>
+              <nav class="navbar__menu">
+                <span class="nav-link">Beranda</span>
+                <span class="nav-link">Promo</span>
+                <span class="nav-link">Profil</span>
+                <span class="nav-link is-active">Kontak</span>
+                <span class="btn btn--brand navbar__wa">Chat Kami</span>
+              </nav>
+              <span class="navbar__toggle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+              </span>
+            </div>
+          </header>
+
+          <section class="page-hero" data-anno="1 · Page hero">
+            <div class="container page-hero__inner">
+              <span class="eyebrow eyebrow--light">Kontak &amp; Lokasi</span>
+              <h1>Mampir atau chat kapan saja</h1>
+              <p>Apoteker kami siap menjawab pertanyaan seputar obat, ketersediaan stok, dan promo yang sedang berjalan.</p>
+            </div>
+            <div class="page-hero__orb page-hero__orb--one"></div>
+            <div class="page-hero__orb page-hero__orb--two"></div>
+          </section>
+
+          <section class="section container">
+            <div class="contact-grid" data-anno="2 · Info + form">
+              <div class="contact-info">
+                <div class="contact-card">
+                  <span class="contact-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M19.5 10.3c0 5.6-7.5 11.2-7.5 11.2S4.5 15.9 4.5 10.3a7.5 7.5 0 1 1 15 0z" /><circle cx="12" cy="10.2" r="2.7" /></svg></span>
+                  <div>
+                    <h3>Alamat Toko</h3>
+                    <p>Jl. Melati No. 24, Kec. Cimanggis, Kota Depok, Jawa Barat 16454</p>
+                    <a href="#kontak">Buka di Google Maps →</a>
+                  </div>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6.4 3.5h3l1.5 3.8-1.9 1.2a11 11 0 0 0 5.5 5.5l1.2-1.9 3.8 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.4 5.7a2 2 0 0 1 2-2.2z" /></svg></span>
+                  <div>
+                    <h3>Telepon &amp; WhatsApp</h3>
+                    <p>+62 812-3456-7890</p>
+                    <p class="contact-card__hint">Balasan tercepat lewat WhatsApp.</p>
+                  </div>
+                </div>
+                <div class="contact-card">
+                  <span class="contact-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5" /><path d="M3.8 7.2L12 12.6l8.2-5.4" /></svg></span>
+                  <div>
+                    <h3>Email</h3>
+                    <p>halo@apotek3d.id</p>
+                    <p class="contact-card__hint">Untuk kerja sama dan pengadaan institusi.</p>
+                  </div>
+                </div>
+                <div class="contact-card contact-card--hours">
+                  <span class="contact-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 1.8" /></svg></span>
+                  <div>
+                    <h3>Jam Operasional</h3>
+                    <ul>
+                      <li><span>Senin – Jumat</span><strong>08.00 – 22.00</strong></li>
+                      <li><span>Sabtu</span><strong>08.00 – 23.00</strong></li>
+                      <li><span>Minggu</span><strong>09.00 – 21.00</strong></li>
+                      <li class="is-highlight"><span>Antar obat darurat</span><strong>24 jam via WhatsApp</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <form class="contact-form" data-anno="3 · Form → WhatsApp" onsubmit="return false">
+                <span class="eyebrow">Kirim Pesan</span>
+                <h2>Butuh obat atau konsultasi?</h2>
+                <p>Isi data berikut, pesan Anda akan otomatis terkirim ke WhatsApp apotek kami beserta format yang rapi.</p>
+                <div class="field-row">
+                  <label class="field"><span>Nama lengkap</span><input type="text" placeholder="Contoh: Rina Kurnia" /></label>
+                  <label class="field"><span>No. HP / WhatsApp</span><input type="tel" placeholder="0812xxxxxxx" /></label>
+                </div>
+                <label class="field">
+                  <span>Keperluan</span>
+                  <select>
+                    <option>Konsultasi obat</option>
+                    <option>Cek ketersediaan produk</option>
+                    <option>Pesan dan antar ke rumah</option>
+                    <option>Resep dokter</option>
+                    <option>Kerja sama dan pengadaan</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>Pesan</span>
+                  <textarea placeholder="Tuliskan keluhan, nama obat, atau daftar belanjaan Anda…"></textarea>
+                </label>
+                <span class="btn btn--brand btn--lg btn--block">Kirim via WhatsApp</span>
+              </form>
+            </div>
+          </section>
+
+          <section class="section section--tint" data-anno="4 · Peta">
+            <div class="container">
+              <div class="section-title section-title--center">
+                <span class="eyebrow">Lokasi Kami</span>
+                <h2>Mudah dijangkau dari arah mana pun</h2>
+                <p>Berada di pusat Cimanggis, 2 menit dari exit tol dan dekat halte TransJakarta.</p>
+              </div>
+              <div class="map-frame">
+                <span class="map-pin">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l7.5 3v5.2c0 4.6-3.2 8.7-7.5 10.3C7.7 19.9 4.5 15.8 4.5 11.2V6L12 3z" /><path d="M9 12.2l2.1 2.1 4-4.2" /></svg>
+                </span>
+                <span class="map-label">📍 apotek3D — Jl. Melati No. 24, Cimanggis, Depok</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section container" data-anno="5 · FAQ">
+            <div class="section-title section-title--center">
+              <span class="eyebrow">Pertanyaan Umum</span>
+              <h2>Sering ditanyakan pelanggan</h2>
+            </div>
+            <div class="faq">
+              <details open>
+                <summary>Apakah bisa beli obat tanpa resep dokter?<span class="faq__plus"></span></summary>
+                <p>Obat bebas (OB) dan obat terbatas (OTC) bisa langsung dibeli. Untuk obat keras (K) kami memerlukan salinan resep dokter sesuai peraturan yang berlaku.</p>
+              </details>
+              <details>
+                <summary>Berapa lama pesanan diantar?<span class="faq__plus"></span></summary>
+                <p>Untuk area Cimanggis sekitarnya rata-rata 30 menit sejak pesanan dikonfirmasi. Di luar jam buka, layanan antar tetap tersedia melalui WhatsApp.</p>
+              </details>
+              <details>
+                <summary>Metode pembayaran apa yang diterima?<span class="faq__plus"></span></summary>
+                <p>Tunai, kartu debit, QRIS, transfer bank, dan dompet digital (GoPay, OVO, DANA, ShopeePay).</p>
+              </details>
+              <details>
+                <summary>Apakah menerima resep dokter dari rumah sakit?<span class="faq__plus"></span></summary>
+                <p>Bisa. Kirim foto resep melalui WhatsApp, lalu apoteker kami akan mengecek ketersediaan obat dan mengabari estimasi waktu penyiapan.</p>
+              </details>
+            </div>
+          </section>
+
+          <footer class="footer">
+            <div class="container footer__bottom">
+              <span>© 2026 apotek3D · Bukan pengganti konsultasi dokter.</span>
+              <span>Izin SIP No. 503/1234/DPMPTSP/2024</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           HALAMAN 5 — 404
+           ============================================================ -->
+      <section class="m-page" id="notfound">
+        <div class="m-page__head">
+          <span class="m-page__num">5</span>
+          <div>
+            <h2>404 — <code style="font-size: 13px; color: var(--muted)">*</code></h2>
+            <p>Halaman tidak ditemukan</p>
+          </div>
+        </div>
+
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots"><i></i><i></i><i></i></span>
+            <span class="frame__url">https://apotek3d.id/halaman-yang-tidak-ada</span>
+          </div>
+          <header class="navbar is-scrolled">
+            <div class="container navbar__inner">
+              <span class="brand">
+                <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <path d="M24 4 44 15 24 26 4 15Z" fill="#2ee6a8" /><path d="M4 15 24 26v18L4 33Z" fill="#0f9d76" />
+                  <path d="M44 15 24 26v18l20-11Z" fill="#0b8463" /><circle cx="37" cy="37" r="9.5" fill="#fff" />
+                  <path d="M37 32.5v9M32.5 37h9" stroke="#0f9d76" stroke-width="3.2" stroke-linecap="round" />
+                </svg>
+                <span class="brand__text">apotek<span>3D</span></span>
+              </span>
+              <nav class="navbar__menu">
+                <span class="nav-link">Beranda</span>
+                <span class="nav-link">Promo</span>
+                <span class="nav-link">Profil</span>
+                <span class="nav-link">Kontak</span>
+                <span class="btn btn--brand navbar__wa">Chat Kami</span>
+              </nav>
+              <span class="navbar__toggle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+              </span>
+            </div>
+          </header>
+          <section class="notfound">
+            <span class="notfound__code">404</span>
+            <h1>Halaman tidak ditemukan</h1>
+            <p>Halaman yang kamu tuju sudah dipindah atau tidak pernah ada.</p>
+            <span class="btn btn--brand btn--lg">Kembali ke Beranda</span>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <script src="mockup.js"></script>
+  </body>
+</html>

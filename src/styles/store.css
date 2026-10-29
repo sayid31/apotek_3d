@@ -1,0 +1,446 @@
+/* ============================================================
+   3D Toko Apotek — hero beranda + layar muat pembuka
+   ============================================================ */
+
+/* ---------------- Hero toko 3D ---------------- */
+.store-hero {
+  position: relative;
+  height: min(92vh, 820px);
+  min-height: 560px;
+  background: #0d1a16;
+  overflow: hidden;
+}
+
+.store-hero__canvas {
+  position: absolute;
+  inset: 0;
+  cursor: grab;
+}
+
+.store-hero__canvas:active {
+  cursor: grabbing;
+}
+
+/* gradasi agar teks di kiri tetap terbaca di atas scene 3D */
+.store-hero__canvas::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    rgba(6, 22, 18, 0.94) 0%,
+    rgba(6, 22, 18, 0.72) 34%,
+    rgba(6, 22, 18, 0.12) 62%,
+    rgba(6, 22, 18, 0) 100%
+  );
+}
+
+.store-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 96px 40px 40px;
+  pointer-events: none;
+}
+
+.store-hero__copy {
+  pointer-events: auto;
+  max-width: 500px;
+  animation: riseIn 0.8s ease both;
+}
+
+.store-hero .eyebrow {
+  color: #8ff0d4;
+  background: rgba(20, 184, 132, 0.14);
+  border-color: rgba(111, 224, 189, 0.3);
+}
+
+.store-hero h1 {
+  color: #fff;
+  font-size: clamp(2.1rem, 4.4vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.store-hero h1 em {
+  display: block;
+  font-style: normal;
+  font-size: 0.42em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.86);
+  margin-top: 10px;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
+}
+
+.store-hero__lead {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1rem;
+  max-width: 44ch;
+  margin-top: 18px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.store-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.store-hero__hint {
+  margin-top: 22px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.42);
+  text-transform: uppercase;
+}
+
+.store-hero__card {
+  pointer-events: auto;
+  width: min(330px, 88vw);
+  align-self: flex-end;
+  margin-bottom: 24px;
+  padding: 22px;
+  border-radius: var(--radius);
+  background: rgba(8, 26, 21, 0.72);
+  border: 1px solid rgba(111, 224, 189, 0.24);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.9);
+  animation: riseIn 0.5s ease both;
+}
+
+.store-hero__card h3 {
+  color: #fff;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  margin: 10px 0 6px;
+}
+
+.store-hero__card p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.84rem;
+}
+
+.store-hero__price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.store-hero__price strong {
+  color: #6fe0bd;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.store-hero__price s {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.84rem;
+}
+
+/* fallback statis selagi scene 3D dimuat */
+.store-hero--static {
+  background:
+    radial-gradient(1000px 500px at 20% 20%, rgba(20, 184, 132, 0.28), transparent 62%),
+    radial-gradient(800px 420px at 90% 80%, rgba(201, 169, 110, 0.16), transparent 60%),
+    linear-gradient(140deg, #0a241d 0%, #06120f 70%);
+}
+
+/* ============================================================
+   LAYAR MUAT PEMBUKA — sederhana, animasi mewah, masuk otomatis
+   ============================================================ */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 30px 0;
+  overflow: hidden;
+  color: #eaf5f1;
+  background:
+    radial-gradient(820px 480px at 50% 44%, rgba(20, 184, 132, 0.2), transparent 62%),
+    radial-gradient(680px 400px at 88% 104%, rgba(201, 169, 110, 0.1), transparent 60%),
+    #06120f;
+  /* dasar iris, supaya transisi keluar bisa dianimasikan */
+  clip-path: circle(150% at 50% 50%);
+  transition:
+    clip-path 0.75s cubic-bezier(0.6, 0, 0.25, 1),
+    opacity 0.55s ease 0.3s,
+    transform 0.85s cubic-bezier(0.3, 0.8, 0.3, 1);
+}
+
+/* layar menutup seperti iris lensa, situs terbuka di belakangnya */
+.loader.is-leave {
+  clip-path: circle(0% at 50% 50%);
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+/* kisi lantai bergerak */
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: -45%;
+  background-image:
+    linear-gradient(rgba(111, 224, 189, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 224, 189, 0.07) 1px, transparent 1px);
+  background-size: 62px 62px;
+  transform: perspective(520px) rotateX(60deg);
+  animation: loaderGrid 8s linear infinite;
+  pointer-events: none;
+}
+
+/* sapuan cahaya lembut */
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -34%;
+  width: 34%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(111, 224, 189, 0.13),
+    transparent
+  );
+  animation: loaderSweep 3.8s cubic-bezier(0.45, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes loaderGrid {
+  to {
+    background-position: 0 62px, 62px 0;
+  }
+}
+
+@keyframes loaderSweep {
+  to {
+    left: 134%;
+  }
+}
+
+/* ---------- baris atas: merek ---------- */
+.loader__top {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.loader__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.loader__brand svg {
+  color: #6fe0bd;
+}
+
+/* ---------- inti: ring + persentase ---------- */
+.loader__center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loader__ring {
+  position: relative;
+  width: clamp(148px, 21vw, 206px);
+  aspect-ratio: 1;
+}
+
+.loader__ring svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.loader__ring-base {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 2;
+}
+
+/* cincin putus-putus yang berputar */
+.loader__ring-dash {
+  fill: none;
+  stroke: rgba(111, 224, 189, 0.5);
+  stroke-width: 1.6;
+  stroke-dasharray: 3 13;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: loaderSpin 18s linear infinite;
+}
+
+/* busur progres */
+.loader__ring-arc {
+  fill: none;
+  stroke: #3ee0ae;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  filter: drop-shadow(0 0 8px rgba(62, 224, 174, 0.75));
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+@keyframes loaderSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* lambang apotek di tengah ring */
+.loader__core {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #04211a;
+  border-radius: 50%;
+  background: linear-gradient(140deg, #7ff0d1, #12b183);
+  width: 66px;
+  height: 66px;
+  margin: auto;
+  box-shadow:
+    0 0 0 9px rgba(20, 184, 132, 0.12),
+    0 0 40px rgba(20, 184, 132, 0.55);
+  animation: loaderPulse 1.9s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  50% {
+    box-shadow:
+      0 0 0 15px rgba(20, 184, 132, 0.05),
+      0 0 62px rgba(20, 184, 132, 0.85);
+  }
+}
+
+/* angka besar, digit tidak menggeser (tabular) */
+.loader__pct {
+  font-size: clamp(2.5rem, 6.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.loader__pct em {
+  font-style: normal;
+  font-size: 0.42em;
+  color: #6fe0bd;
+  margin-left: 3px;
+}
+
+.loader__hint {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.36);
+}
+
+/* ---------- baris bawah: bar progres ---------- */
+.loader__foot {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1240px;
+  padding-bottom: 24px;
+}
+
+.loader__bar {
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.loader__bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7ff0d1, #12b183);
+  box-shadow: 0 0 14px rgba(20, 184, 132, 0.9);
+  transition: width 0.3s linear;
+}
+
+/* ---------------- Responsif ---------------- */
+@media (max-width: 980px) {
+  .loader {
+    padding: 20px 20px 0;
+  }
+
+  .store-hero {
+    height: auto;
+    min-height: 720px;
+  }
+
+  .store-hero__overlay {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 110px 20px 26px;
+  }
+
+  .store-hero__copy {
+    max-width: none;
+  }
+
+  .store-hero__card {
+    align-self: stretch;
+    margin-bottom: 0;
+  }
+
+  .store-hero__canvas::after {
+    background: linear-gradient(
+      180deg,
+      rgba(6, 22, 18, 0.85) 0%,
+      rgba(6, 22, 18, 0.25) 38%,
+      rgba(6, 22, 18, 0.92) 78%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader,
+  .loader::before,
+  .loader::after,
+  .loader__ring-dash,
+  .loader__core {
+    transition: none;
+    animation: none;
+  }
+}
